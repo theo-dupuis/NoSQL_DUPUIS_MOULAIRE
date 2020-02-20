@@ -1,0 +1,8 @@
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e3"},"nom":"Dupuis","prenom":"Theo","date_de_naissance":{"$date":"1997-12-22T23:00:00Z"},"taille":177,"poids":70,"poste":"defenseur"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e4"},"nom":"Moulaire","prenom":"Yann","date_de_naissance":{"$date":"1998-04-08T22:00:00Z"},"taille":171,"poids":65,"poste":"defenseur"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e5"},"nom":"Frade","prenom":"Clement","date_de_naissance":{"$date":"1996-12-04T23:00:00Z"},"taille":184,"poids":75,"poste":"milieu"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e6"},"nom":"Marie","prenom":"Lucas","date_de_naissance":{"$date":"1996-01-04T23:00:00Z"},"taille":189,"poids":77,"poste":"milieu"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e7"},"nom":"Peyrot","prenom":"Guillaume","date_de_naissance":{"$date":"1997-07-17T22:00:00Z"},"taille":185,"poids":71,"poste":"attaquant"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e8"},"nom":"Ittel","prenom":"Etienne","date_de_naissance":{"$date":"1997-02-12T23:00:00Z"},"taille":176,"poids":72,"poste":"attaquant"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6e9"},"nom":"Girodon","prenom":"Remy","date_de_naissance":{"$date":"1978-08-25T22:00:00Z"},"taille":174,"poids":68,"poste":"gardien"}
+{"_id":{"$oid":"5e2b05b1afd92f2c8042e6ea"},"nom":"Tissier","prenom":"Julien","date_de_naissance":{"$date":"1984-12-05T23:00:00Z"},"taille":175,"poids":65,"poste":"gardien"}

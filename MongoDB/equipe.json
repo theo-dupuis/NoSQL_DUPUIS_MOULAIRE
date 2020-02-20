@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5e2b9321fafa039ad7120157"},"nom":"TSE Football Club","couleur":"bleu","stade":"salle newsplex","effectif_ids":[{"$oid":"5e2b05b1afd92f2c8042e6e3"},{"$oid":"5e2b05b1afd92f2c8042e6e5"},{"$oid":"5e2b05b1afd92f2c8042e6e7"},{"$oid":"5e2b05b1afd92f2c8042e6e9"}]}
+{"_id":{"$oid":"5e2b9368fafa039ad7120175"},"nom":"Federation Telecomienne de Football","couleur":"orange","stade":"amphi J022","effectif_ids":[{"$oid":"5e2b05b1afd92f2c8042e6e4"},{"$oid":"5e2b05b1afd92f2c8042e6e6"},{"$oid":"5e2b05b1afd92f2c8042e6e8"},{"$oid":"5e2b05b1afd92f2c8042e6ea"}]}
