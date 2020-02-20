@@ -5,7 +5,7 @@ Yann MOULAIRE
 
 Pour commencer à utiliser les différents scripts, il faut d'abord importer la base via les trois fichiers JSON (joueur.json, equipe.json et match.json). Pour cela, il suffit d'entrer les commandes suivantes dans le dossier contenant les fichiers JSON :
 
-mongoimport --collection=joueur --db=TY --file=joueur.json
+mongoimport --collection=joueur --db=TY --file=joueur.json\n
 mongoimport --collection=equipe --db=TY --file=equipe.json
 mongoimport --collection=match --db=TY --file=match.json
 
