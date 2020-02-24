@@ -1,0 +1,8 @@
+CREATE (e:ENTREPRISE {Nom:"AXON" , Secteur:"Armes technologiques", Details:"AXON vend des armes amelioree grace a la technologie", Taille: 100})
+RETURN e;
+
+CREATE (e:ENTREPRISE {Nom:"A-SIS" , Secteur:"Developpement logiciel", Details:"A-SIS developpe une solution logiciel pour le logistique", Taille: 250})
+RETURN e;
+
+CREATE (e:ENTREPRISE {Nom:"Casino" , Secteur:"Supermarche", Details:"Casino est une chaine de supermarche", Taille: 1500})
+RETURN e;

@@ -1,0 +1,7 @@
+MATCH (e:ENTREPRISE {Nom:"A-SIS"}) // MATCH est la recherche, ici se fait par nom de l'entreprise. 
+RETURN e;
+
+Requête de recherche par Nom d'utilsateur : 
+
+MATCH (u:UTILISATEUR {Prenom:"Yann"}) // MATCH est la recherche, ici se fait par prénom de l'utilisateur. 
+RETURN u; 

@@ -1,0 +1,24 @@
+MATCH (u:UTILISATEUR {Nom: "Frade"}) //on va chercher un utilisateur par son nom de famille
+MATCH (v:UTILISATEUR {Nom:"Moulaire"}) //on va chercher un deuxième.
+CREATE (u)-[ata:A_TRAVAILLE_AVEC]->(v) //on créé le lien A_TRAVAILLE_AVEC entre les deux
+RETURN //affichage des résultats
+
+MATCH (u:UTILISATEUR {Nom: "Frade"})
+MATCH (v:UTILISATEUR {Nom:"Moulaire"})
+CREATE (u)-[c:CONNAIT]->(v)
+RETURN u,c,v;
+
+MATCH (u:UTILISATEUR {Lastname: "Dupuis"})
+MATCH (v:UTILISATEUR {Lastname:"Frade"})
+CREATE (u)-[c:CONNAIT]->(v)
+RETURN u,c,v;
+
+MATCH (u:UTILISATEUR {Lastname: "Moulaire"})
+MATCH (v:UTILISATEUR {Lastname:"Dupuis"})
+CREATE (u)-[c:CONNAIT]->(v)
+RETURN u,c,v;
+
+MATCH (u:UTILISATEUR {Lastname: "Dupuis"})
+MATCH (v:UTILISATEUR {Lastname:"Moulaire"})
+CREATE (u)-[c:CONNAIT]->(v)
+RETURN u,c,v;

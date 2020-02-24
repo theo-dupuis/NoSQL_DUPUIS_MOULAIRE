@@ -1,0 +1,8 @@
+CREATE (u:UTILISATEUR {Prenom:"Yann" , Nom:"Moulaire", Details:"21 ans, homme", Competences:"Developpement informatique"})
+RETURN u;
+
+CREATE (u:UTILISATEUR {Prenom:"Theo" , Nom:"Dupuis", Details:"22 ans, homme", Competences:"Aucune"})
+RETURN u;
+
+CREATE (u:UTILISATEUR {Prenom:"Clement" , Nom:"Frade", Details:"23 ans, homme", Competences:"Charme hors du commun"})
+RETURN u;
