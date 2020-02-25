@@ -1,0 +1,3 @@
+Ce projet est un projet Java utilisant redis pour gérer un call center.
+
+Pour lancer le server, aller dans le dossier data et lancer redis-server.
