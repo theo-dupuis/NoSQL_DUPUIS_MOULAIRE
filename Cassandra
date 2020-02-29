@@ -1,0 +1,115 @@
+-- Création de l'espace de clé
+CREATE KEYSPACE ks_meteo 
+	WITH REPLICATION  = {
+    	'class' : 'SimpleStrategy', 
+ 		'replication_factor' : 1   	
+
+	};
+
+-- Création de la table "meteo" contenant toutes les données de mesures 
+CREATE TABLE IF NOT EXISTS meteo (
+	id_meteo UUID,
+	longitude long, 
+	latitude long,
+	heure timestamp,
+	temperature int, --Il s'agira en fait d'une virgule fixe
+	humidite int, 
+	pression int,
+	num_station int, 
+	PRIMARY KEY (num_station))
+-- Indexation en fonctions des coordonnées
+WITH CLUSTERING ORDER BY (longitude DESC, latitude ASC); 
+
+-- On crée une vue matérialisée pour requéter par heure
+CREATE MATERIALIZED VIEW IF NOT EXISTS meteo_par_heure 
+AS
+SELECT  id_meteo ,
+	longitude ,
+	latitude ,
+	heure ,
+	temperature ,
+	humidite , 
+	pression ,
+	num_station
+FROM meteo
+WHERE horodatage IS NOT NULL
+AND 
+	identifiant_meteo IS NOT NULL
+PRIMARY KEY (num_station, heure));
+
+-- Indexation en fonctions des coordonnées
+WITH CLUSTERING ORDER BY (longitude DESC, latitude ASC); 
+
+
+-- Insertion de données de mesures dans la table "meteo"
+INSERT INTO meteo
+(
+	longitude,
+	latitude,
+	horodatage,
+	temperature, 
+	humidite,
+	pression,
+	num_station
+) VALUES (
+	7522,
+	1209,
+	'2020-02-20 00:10:0.000', 
+	2487, 
+	682,
+	1120,
+	1 
+);
+
+INSERT INTO meteo
+(
+	longitude,
+	latitude,
+	horodatage,
+	temperature, 
+	humidite,
+	pression,
+	num_station
+) VALUES (
+	9999,
+	9999,
+	'2020-02-20 00:00:00.000', 
+	624, 
+	780,
+	984,
+	1 
+);
+
+
+INSERT INTO meteo
+(
+	longitude,
+	latitude,
+	horodatage,
+	temperature, 
+	humidite,
+	pression,
+	num_station
+
+) VALUES (
+	0,
+	7050,
+	'2020-02-20 00:00:00.000', 
+	952, 
+	782,
+	1237,
+	2
+);
+
+
+-- Récupère toutes les données meteos d'une station en fonction de son identifiant
+SELECT * FROM meteo WHERE num_station = 2;
+
+-- Récupère toutes les données meteos d'une station en fonction de la position géographique 
+SELECT * FROM meteo WHERE num_station = 1 AND longitude = 9999 AND latitude = 9999;
+
+-- Récupère toutes les données meteos d'une station en fonction de l'horodatage
+SELECT * FROM meteo_par_heure WHERE num_station = 1 AND heure = '2020-02-20 00:00:00.000';
+
+-- Récupère toutes les données meteos d'une station en fonction de l'horodatage
+SELECT * FROM meteo_par_heure WHERE num_station = 1 AND heure > '2020-02-20 00:00:00.000' AND heure < '2020-02-20 12:00:00.00';
